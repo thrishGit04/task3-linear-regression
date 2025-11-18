@@ -62,7 +62,7 @@ R² Score – How well model fits data
 These metrics show how accurate the predictions are.
 
 📊 Generated Visualizations
-Stored in task3_outputs/plots_or_logs/:
+Stored in outputs:
 correlation_matrix.png
 actual_vs_predicted.png
 residuals.png
@@ -84,7 +84,6 @@ Upload Housing.csv + linear_regression.py
 
 Run:
 !python linear_regression.py
-
 All outputs will be automatically created inside task3_outputs/.
 
 ✨ Author
