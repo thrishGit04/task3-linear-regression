@@ -1,0 +1,11 @@
+Loaded /mnt/data/Housing.csv shape (545, 13)
+After encoding shape (545, 14)
+Saved processed CSV to /mnt/data/processed_Housing.csv
+Using target: price
+Saved scaler to /mnt/data/task3_outputs/outputs/scaler.joblib
+Saved model to /mnt/data/task3_outputs/outputs/model_linear_regression.joblib
+Saved metrics to /mnt/data/task3_outputs/outputs/test_summary.json
+Saved coefficients to /mnt/data/task3_outputs/outputs/coefficients.csv
+Saved plots to /mnt/data/task3_outputs
+
+ALL DONE.
