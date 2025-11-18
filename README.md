@@ -1,8 +1,10 @@
 **TASK 3 - LINEAR REGRESSION**
+
 This repository contains Task 3 of my AIML Internship project.
 The objective of this task is to build a Linear Regression model that predicts house prices using the Housing.csv dataset.
 
 📁 Repository Structure
+```
 ├── Housing.csv                         # Raw dataset
 ├── processed_Housing.csv               # Cleaned & encoded dataset
 ├── linear_regression.py                # Complete model training script
@@ -20,73 +22,96 @@ The objective of this task is to build a Linear Regression model that predicts h
 │       ├── run_stdout.txt                   # Execution logs (stdout)
 │       └── run_stderr.txt                   # Execution logs (stderr)
 └── README.md
+```
 
 
 
-🧹 Data Preprocessing
+**🧹 Data Preprocessing:**
+
+```
 Converted all "yes" / "no" values into 1 / 0
 One-hot encoded remaining categorical (string) columns
 Ensured the dataset contained only numeric features
+```
 
-Split dataset into:
+**Split dataset into:**
+
+```
 X → Features
 y → Target (price)
 Scaled numerical columns using StandardScaler
 Saved final cleaned file as processed_Housing.csv
+```
+
 🤖 Model Development
 
-Algorithm:
+**Algorithm:** 
 ✔ Linear Regression
 
-Pipeline Steps:
+**Pipeline Steps:**
+
+```
 Load dataset
 Clean & encode categorical features
 Perform train-test split (80% train, 20% test)
 Scale numeric columns
 Train Linear Regression model
 Make predictions on unseen test data
+```
 
-Save:
+**Save:**
+
+```
 Model
 Scaler
 Coefficients
 Evaluation metrics
 Generate plots for analysis
+```
 
-📈 Model Evaluation
-Metrics saved in test_summary.json:
+**📈 Model Evaluation**
+**Metrics saved in test_summary.json:**
+
+```
 MAE – Mean Absolute Error
 MSE – Mean Squared Error
 RMSE – Root Mean Squared Error
 R² Score – How well model fits data
 These metrics show how accurate the predictions are.
+```
 
-📊 Generated Visualizations
-Stored in outputs:
+**📊 Generated Visualizations**
+
+```
+Stored in outputs
 correlation_matrix.png
 actual_vs_predicted.png
 residuals.png
 target_distribution.png
+```
 
-These help understand:
+**These help understand:**
+
+```
 Feature relationships
 Model fit quality
 Error distribution
 Target variable distribution
+```
 
-🚀 How to Run This Project
+**🚀 How to Run This Project**
 
-Run with Python (Locally):
-python linear_regression.py
+**Run with Python (Locally):** ``python linear_regression.py``
 
-Run in Google Colab:
-Upload Housing.csv + linear_regression.py
+**Run in Google Colab:** ``Upload Housing.csv + linear_regression.py``
 
-Run:
-!python linear_regression.py
+**Run:** ``!python linear_regression.py``
+
 All outputs will be automatically created inside task3_outputs/.
 
-✨ Author
+**✨ Author**
 
 Thrishool M S
+
 AIML Internship — Task 3
+
