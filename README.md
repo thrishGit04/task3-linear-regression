@@ -1,115 +1,171 @@
-**TASK 3 - LINEAR REGRESSION**
+# ⭐ **Task 3 — Linear Regression (House Price Prediction)**
 
-This repository contains Task 3 of my AIML Internship project.
-The objective of this task is to build a Linear Regression model that predicts house prices using the Housing.csv dataset.
+This repository contains **Task 3** of my AIML Internship project.
+The goal of this task is to build a **simple & multiple Linear Regression model** to predict **house prices** using the Housing dataset.
 
-📁 Repository Structure
-```
-├── Housing.csv                         # Raw dataset
-├── processed_Housing.csv               # Cleaned & encoded dataset
-├── linear_regression.py                # Complete model training script
-├── output
-│   ├── model_linear_regression.joblib   # Trained Linear Regression model
-│   ├── scaler.joblib                    # StandardScaler used for training
-│   ├── test_summary.json                # MAE, MSE, RMSE, R² results
-│   ├── coefficients.csv                 # Feature coefficients
-│   ├── correlation_matrix.png           # Correlation heatmap
-│   ├── actual_vs_predicted.png          # Actual vs predicted price plot
-│   ├── residuals.png                    # Residuals vs predicted plot
-│   ├── target_distribution.png          # Distribution of target variable
-│   ├── run_stdout.txt                   # Execution logs (stdout)
-│   └── run_stderr.txt                   # Execution logs (stderr)
-└── README.md
-```
+The workflow includes preprocessing, model training, evaluation using regression metrics, and visual interpretation of model performance.
 
+---
 
-
-**🧹 Data Preprocessing:**
+## 📁 **Repository Structure**
 
 ```
-Converted all "yes" / "no" values into 1 / 0
-One-hot encoded remaining categorical (string) columns
-Ensured the dataset contained only numeric features
+├── Housing.csv                     # Raw dataset (uploaded)
+├── processed_Housing.csv           # Cleaned & preprocessed dataset
+├── linear_regression.py            # Complete training script (single-run)
+├── README.md                       # Documentation (this file)
+└── output/
+    ├── actual_vs_predicted.png         # Plot comparing true vs predicted prices
+    ├── coefficients.csv                # Linear regression coefficients
+    ├── correlation_matrix.png          # Correlation heatmap of features
+    ├── empty                           # Placeholder auto-created by Colab
+    ├── model_linear_regression.joblib  # Trained Linear Regression model
+    ├── residuals.png                   # Residuals plot (errors vs predictions)
+    ├── run_stderr.txt                  # Error logs (stderr)
+    ├── run_stdout.txt                  # Execution logs (stdout)
+    ├── scaler.joblib                   # StandardScaler used during training
+    ├── target_distribution.png         # Distribution of the target variable
+    └── test_summary.json               # MAE, MSE, RMSE, R² (evaluation metrics)
 ```
 
-**Split dataset into:**
+---
+
+## 🎯 **Objective**
+
+Implement and understand:
+
+* **Simple Linear Regression**
+* **Multiple Linear Regression**
+* **Regression evaluation metrics**
+* **Visualizing regression performance**
+
+---
+
+## 🧹 **Data Preprocessing Steps**
+
+To prepare the data for regression:
+
+1. Loaded the raw `Housing.csv` dataset.
+2. Identified numerical and categorical features.
+3. Handled missing values (median for numbers).
+4. One-hot encoded categorical columns.
+5. Scaled numerical columns using **StandardScaler**.
+6. Saved the final preprocessed dataset as `processed_Housing.csv`.
+
+---
+
+## 🤖 **Model Training (linear_regression.py)**
+
+The script:
+
+* Reads `processed_Housing.csv`
+* Splits data into **train/validation/test**
+* Fits a **Linear Regression model**
+* Evaluates using:
+
+  * **MAE** (Mean Absolute Error)
+  * **MSE** (Mean Squared Error)
+  * **RMSE**
+  * **R² Score**
+* Saves:
+
+  * trained model (`model_linear_regression.joblib`)
+  * scaler (`scaler.joblib`)
+  * coefficients (`coefficients.csv`)
+  * summary (`test_summary.json`)
+
+---
+
+## 📊 **Generated Visualizations**
+
+All stored inside `output/`:
+
+### ✔ **Correlation Matrix**
+
+Understanding relationship between features.
+`correlation_matrix.png`
+
+### ✔ **Actual vs Predicted Plot**
+
+Shows how close predictions are to real house prices.
+`actual_vs_predicted.png`
+
+### ✔ **Residuals Plot**
+
+Shows model errors. Ideal residuals cluster around zero.
+`residuals.png`
+
+### ✔ **Target Distribution**
+
+Shows the distribution of house prices.
+`target_distribution.png`
+
+---
+
+## 🧪 **Evaluation Metrics**
+
+Stored in:
 
 ```
-X → Features
-y → Target (price)
-Scaled numerical columns using StandardScaler
-Saved final cleaned file as processed_Housing.csv
+output/test_summary.json
 ```
 
-🤖 Model Development
+Contains:
 
-**Algorithm:** 
-✔ Linear Regression
+* **MAE**
+* **MSE**
+* **RMSE**
+* **R² Score**
 
-**Pipeline Steps:**
+These metrics quantify model accuracy and error levels.
 
-```
-Load dataset
-Clean & encode categorical features
-Perform train-test split (80% train, 20% test)
-Scale numeric columns
-Train Linear Regression model
-Make predictions on unseen test data
-```
+---
 
-**Save:**
+## 🚀 **How to Run the Project**
 
-```
-Model
-Scaler
-Coefficients
-Evaluation metrics
-Generate plots for analysis
-```
+### **Option 1 — Google Colab (Recommended)**
 
-**📈 Model Evaluation**
-**Metrics saved in test_summary.json:**
+Upload these files:
 
-```
-MAE – Mean Absolute Error
-MSE – Mean Squared Error
-RMSE – Root Mean Squared Error
-R² Score – How well model fits data
-These metrics show how accurate the predictions are.
+* `Housing.csv`
+* `linear_regression.py`
+
+Run:
+
+```python
+!python linear_regression.py
 ```
 
-**📊 Generated Visualizations**
+All outputs will be generated inside the `output/` folder.
 
-```
-Stored in outputs
-correlation_matrix.png
-actual_vs_predicted.png
-residuals.png
-target_distribution.png
-```
+---
 
-**These help understand:**
+### **Option 2 — Local Machine**
 
-```
-Feature relationships
-Model fit quality
-Error distribution
-Target variable distribution
+Install requirements:
+
+```bash
+pip install numpy pandas scikit-learn matplotlib seaborn joblib
 ```
 
-**🚀 How to Run This Project**
+Run:
 
-**Run with Python (Locally):** ``python linear_regression.py``
+```bash
+python linear_regression.py
+```
 
-**Run in Google Colab:** ``Upload Housing.csv + linear_regression.py``
+---
 
-**Run:** ``!python linear_regression.py``
+## 📝 **Dataset**
 
-All outputs will be automatically created inside task3_outputs/.
+**Housing Price Dataset**
+A simple dataset typically used for regression learning tasks.
 
-**✨ Author**
+---
 
-Thrishool M S
+## ✨ **Author**
 
-AIML Internship — Task 3
+**Thrishool M S**
+
+AIML Internship — *Task 3: Linear Regression*
 
