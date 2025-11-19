@@ -8,19 +8,17 @@ The objective of this task is to build a Linear Regression model that predicts h
 ├── Housing.csv                         # Raw dataset
 ├── processed_Housing.csv               # Cleaned & encoded dataset
 ├── linear_regression.py                # Complete model training script
-├── task3_outputs/
-│   ├── outputs/
-│   │   ├── model_linear_regression.joblib   # Trained Linear Regression model
-│   │   ├── scaler.joblib                    # StandardScaler used for training
-│   │   ├── test_summary.json                # MAE, MSE, RMSE, R² results
-│   │   └── coefficients.csv                 # Feature coefficients
-│   └── plots_or_logs/
-│       ├── correlation_matrix.png           # Correlation heatmap
-│       ├── actual_vs_predicted.png          # Actual vs predicted price plot
-│       ├── residuals.png                    # Residuals vs predicted plot
-│       ├── target_distribution.png          # Distribution of target variable
-│       ├── run_stdout.txt                   # Execution logs (stdout)
-│       └── run_stderr.txt                   # Execution logs (stderr)
+├── output
+│   ├── model_linear_regression.joblib   # Trained Linear Regression model
+│   ├── scaler.joblib                    # StandardScaler used for training
+│   ├── test_summary.json                # MAE, MSE, RMSE, R² results
+│   ├── coefficients.csv                 # Feature coefficients
+│   ├── correlation_matrix.png           # Correlation heatmap
+│   ├── actual_vs_predicted.png          # Actual vs predicted price plot
+│   ├── residuals.png                    # Residuals vs predicted plot
+│   ├── target_distribution.png          # Distribution of target variable
+│   ├── run_stdout.txt                   # Execution logs (stdout)
+│   └── run_stderr.txt                   # Execution logs (stderr)
 └── README.md
 ```
 
